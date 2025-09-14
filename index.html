@@ -1,134 +1,479 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Gorgo</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>AI Project — Responsive Bootstrap</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+		rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ai.css">
 </head>
+
 <body>
+	<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm">
+		<div class="container">
+			<a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+				<img src="img/logo1.png" alt="Logo" height="28">
+				<span class="fw-semibold">AI Project</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+				aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mainNav">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+					<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#demos">Demos</a></li>
+					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#services">Services</a></li>
+					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#testimonials">Testimonials</a>
+					</li>
+					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#pricing">Pricing</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+					<!-- Mobile-only: collapse overflow items into dropdown -->
+					<li class="nav-item dropdown d-lg-none">
+						<a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							More
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="moreDropdown">
+							<li><a class="dropdown-item" href="#demos">Demos</a></li>
+							<li><a class="dropdown-item" href="#services">Services</a></li>
+							<li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+							<li><a class="dropdown-item" href="#pricing">Pricing</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="d-flex gap-2">
+					<a href="#pricing" class="btn btn-primary btn-fx-1">Get Started</a>
+					<a href="#contact" class="btn btn-outline-dark btn-fx-2">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
 
-	<div class="header-area">
+	<!-- Hero -->
+	<header id="home" class="py-5 py-lg-6 bg-light">
 		<div class="container">
-			<div class="header">
-				<div class="logo">
-					<img src="img/logo1.png" alt="logo">
+			<div class="row align-items-center g-4">
+				<div class="col-lg-6 order-2 order-lg-1">
+					<h1 class="display-5 fw-bold mb-3">Build smarter with modern AI solutions</h1>
+					<p class="lead text-secondary mb-4">Clean, responsive and fast. Designed with Bootstrap grid, custom
+						hover effects, and a consistent card experience across sections.</p>
+					<div class="d-flex gap-3 flex-wrap">
+						<a href="#demos" class="btn btn-dark btn-fx-3"><i class="fa fa-play me-2"></i>View Demos</a>
+						<a href="#features" class="btn btn-outline-secondary btn-fx-4">Learn More</a>
+					</div>
 				</div>
-				<div class="menu">
-					<ul>
-						<li><a href="#">Demos</a></li>
-						<li><a href="#">Features</a></li>
-						<li><a href="#">Documentation</a></li>
-					</ul>
-				</div>
-				<div class="header-button">
-					<button>Purchase Theme $29</button>
+				<div class="col-lg-6 order-1 order-lg-2 text-center">
+					<img src="img/up1.jpg" alt="Hero" class="img-fluid rounded shadow">
 				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 
-	<div class="banner-area">
+	<!-- Features -->
+	<section id="features" class="py-5">
 		<div class="container">
-			<div class="banner">
-				<div class="banner-left">
-					<h1>Minimal Content Focused blog & Magazine</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interd  sodales. pharetra  nec, ullamcorperpharetra vel felis nec, ullamcorp.</p>
-					<a href="#projects"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+			<div class="text-center mb-5">
+				<h2 class="fw-bold">Features</h2>
+				<p class="text-secondary">A quick tour of the main features</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<div class="mx-auto rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center"
+							style="height:64px;width:64px;">
+							<img src="img/icon1.png" alt="icon" height="36">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Fully Customizable</h5>
+							<p class="card-text text-secondary">Tweak layouts, colors and behaviors with clean,
+								extensible CSS.</p>
+						</div>
+					</div>
 				</div>
-				<div class="banner-right">
-					<img src="img/up1.jpg">
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<div class="mx-auto rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center"
+							style="height:64px;width:64px;">
+							<img src="img/icon2.png" alt="icon" height="36">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">1‑Click Demo Import</h5>
+							<p class="card-text text-secondary">Start fast with ready sections and sample content.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<div class="mx-auto rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center"
+							style="height:64px;width:64px;">
+							<img src="img/icon3.png" alt="icon" height="36">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Membership Ready</h5>
+							<p class="card-text text-secondary">Support free or paid memberships out of the box.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<div class="mx-auto rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center"
+							style="height:64px;width:64px;">
+							<img src="img/icon4.png" alt="icon" height="36">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Sell Products</h5>
+							<p class="card-text text-secondary">Digital or physical — clean cards and CTAs convert.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<div class="mx-auto rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center"
+							style="height:64px;width:64px;">
+							<img src="img/icon5.png" alt="icon" height="36">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Engagement</h5>
+							<p class="card-text text-secondary">Likes, shares and delightful micro‑interactions baked
+								in.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<div class="mx-auto rounded-circle bg-white shadow-sm d-flex align-items-center justify-content-center"
+							style="height:64px;width:64px;">
+							<img src="img/icon6.png" alt="icon" height="36">
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Responsive by Design</h5>
+							<p class="card-text text-secondary">Mobile‑first grid ensures it looks great everywhere.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="projects" id="projects">
-		<h1>Our Stunning Demo</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris<br/>interdum purus at semn ornare sodales.</p>
-		<div class="projects-gallery"> 
-			<div class="category"> 
-				<img src="img/bottom1.jpg">
-				<h3>Classic</h3>
-			</div>
-			<div class="category">
-				<img src="img/bottom2.jpg">
-				<h3>Shop</h3>
-			</div>
-			<div class="category">
-				<img src="img/bottom3.jpg">
-				<h3>Dark Mode</h3>
-			</div>
-			<div class="category">
-				<img src="img/bottom4.jpg">
-				<h3>Minimal</h3>
-			</div>
-		</div>
-	</div> 
-	<div class="Features">
+	</section>
+
+	<!-- Demos/Projects -->
+	<section id="demos" class="py-5 bg-light">
 		<div class="container">
-			<div class="Features-content">
-				<h3>Features</h3>
-				<p>A Quick tour of the main features</p>
+			<div class="text-center mb-5">
+				<h2 class="fw-bold">Our Stunning Demos</h2>
+				<p class="text-secondary">Explore layouts built on the Bootstrap grid</p>
 			</div>
-			<div class="features-gallery">
-				<div class="item">
-					<span>
-						<img src="img/icon1.png">
-					</span>
-					<h4>Fully Customizable</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum purus at semn ornare sodales. pharetra vel felis nec, ullamcorper condimentum quam.</p>
+			<div class="row g-4">
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="card hover-lift h-100">
+						<img src="img/bottom1.jpg" class="card-img-top" alt="Classic" />
+						<div class="card-body">
+							<h5 class="card-title">Classic</h5>
+							<a href="#" class="btn btn-sm btn-outline-dark btn-fx-5">Preview</a>
+						</div>
+					</div>
 				</div>
-				<div class="item">
-					<span>
-						<img src="img/icon2.png">
-					</span>
-					<h4>Simple Deom Import</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum purus at semn ornare sodales. pharetra vel felis nec, ullamcorper condimentum quam.</p>
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="card hover-lift h-100">
+						<img src="img/bottom2.jpg" class="card-img-top" alt="Shop" />
+						<div class="card-body">
+							<h5 class="card-title">Shop</h5>
+							<a href="#" class="btn btn-sm btn-outline-primary btn-fx-6">Preview</a>
+						</div>
+					</div>
 				</div>
-				<div class="item">
-					<span>
-						<img src="img/icon3.png">
-					</span>
-					<h4>Paid & Free Memberships</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum purus at semn ornare sodales. pharetra vel felis nec, ullamcorper condimentum quam.</p>
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="card hover-lift h-100">
+						<img src="img/bottom3.jpg" class="card-img-top" alt="Dark Mode" />
+						<div class="card-body">
+							<h5 class="card-title">Dark Mode</h5>
+							<a href="#" class="btn btn-sm btn-outline-success btn-fx-7">Preview</a>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="features-gallery">
-				<div class="item">
-					<span>
-						<img src="img/icon4.png">
-					</span>
-					<h4>Sell Digital & Physical Products</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum purus at semn ornare sodales. pharetra vel felis nec, ullamcorper condimentum quam.</p>
-				</div>
-				<div class="item">
-					<span>
-						<img src="img/icon5.png">
-					</span>
-					<h4>Like Posts</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum purus at semn ornare sodales. pharetra vel felis nec, ullamcorper condimentum quam.</p>
-				</div>
-				<div class="item">
-					<span>
-						<img src="img/icon6.png">
-					</span>
-					<h4>Responsive is not an option anymore</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris interdum purus at semn ornare sodales. pharetra vel felis nec, ullamcorper condimentum quam.</p>
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="card hover-lift h-100">
+						<img src="img/bottom4.jpg" class="card-img-top" alt="Minimal" />
+						<div class="card-body">
+							<h5 class="card-title">Minimal</h5>
+							<a href="#" class="btn btn-sm btn-outline-danger btn-fx-8">Preview</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="footer">
+	</section>
+
+	<!-- Services (cards share same effect) -->
+	<section id="services" class="py-5">
 		<div class="container">
-			<div class="footer-content">
-				<h1>Purchase Gorgo Now <br/>and Make Your Project <br/>Easier</h1>
-				<div class="bottom-button">
-					<button>Purchase Theme $29</button>
+			<div class="text-center mb-5">
+				<h2 class="fw-bold">AI Services</h2>
+				<p class="text-secondary">Production‑ready components with consistent card interactions</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100">
+						<div class="card-body">
+							<h5 class="card-title">Chatbot Integration</h5>
+							<p class="card-text text-secondary">Embed assistants into your app with secure API gateways.
+							</p>
+							<a href="#contact" class="btn btn-primary btn-fx-2">Request Demo</a>
+						</div>
+					</div>
 				</div>
-				<img src="img/bottom.png">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100">
+						<div class="card-body">
+							<h5 class="card-title">Recommendation Engine</h5>
+							<p class="card-text text-secondary">Personalize content and offers using your data safely.
+							</p>
+							<a href="#contact" class="btn btn-dark btn-fx-3">Request Demo</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100">
+						<div class="card-body">
+							<h5 class="card-title">Document AI</h5>
+							<p class="card-text text-secondary">Summarize, extract and automate document workflows.</p>
+							<a href="#contact" class="btn btn-outline-secondary btn-fx-4">Request Demo</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+
+	<!-- Testimonials -->
+	<section id="testimonials" class="py-5 bg-light">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="fw-bold">What Clients Say</h2>
+				<p class="text-secondary">Real feedback from teams using our templates</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<img src="img/up1.jpg" class="rounded-circle mx-auto mt-3"
+							style="width:84px;height:84px;object-fit:cover;" alt="Client A">
+						<div class="card-body">
+							<p class="card-text">“Clean code and beautiful effects. Mobile menu is perfect!”</p>
+							<h6 class="mb-0">Sadia Rahman</h6>
+							<small class="text-secondary">Product Manager</small>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<img src="img/bottom1.jpg" class="rounded-circle mx-auto mt-3"
+							style="width:84px;height:84px;object-fit:cover;" alt="Client B">
+						<div class="card-body">
+							<p class="card-text">“Cards and hover transitions feel smooth and consistent.”</p>
+							<h6 class="mb-0">Farhan Ali</h6>
+							<small class="text-secondary">Frontend Lead</small>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100 text-center p-3">
+						<img src="img/bottom2.jpg" class="rounded-circle mx-auto mt-3"
+							style="width:84px;height:84px;object-fit:cover;" alt="Client C">
+						<div class="card-body">
+							<p class="card-text">“Exactly what we needed for fast AI prototypes.”</p>
+							<h6 class="mb-0">Tanvir Hasan</h6>
+							<small class="text-secondary">CTO</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing -->
+	<section id="pricing" class="py-5">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="fw-bold">Pricing</h2>
+				<p class="text-secondary">Simple plans for every stage</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100">
+						<div class="card-body">
+							<h5 class="card-title">Starter</h5>
+							<p class="display-6 mb-0">$0</p>
+							<small class="text-secondary">Free forever</small>
+							<ul class="mt-3 small text-secondary">
+								<li>Basic components</li>
+								<li>Email support</li>
+							</ul>
+							<a href="#contact" class="btn btn-outline-dark w-100 btn-fx-6">Try Free</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100 border-primary">
+						<div class="card-body">
+							<h5 class="card-title">Pro</h5>
+							<p class="display-6 mb-0">$29</p>
+							<small class="text-secondary">Per project</small>
+							<ul class="mt-3 small text-secondary">
+								<li>All components</li>
+								<li>Priority support</li>
+								<li>Commercial use</li>
+							</ul>
+							<a href="#contact" class="btn btn-primary w-100 btn-fx-1">Purchase</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card hover-lift h-100">
+						<div class="card-body">
+							<h5 class="card-title">Enterprise</h5>
+							<p class="display-6 mb-0">Custom</p>
+							<small class="text-secondary">Let's talk</small>
+							<ul class="mt-3 small text-secondary">
+								<li>Advanced onboarding</li>
+								<li>SLAs & training</li>
+							</ul>
+							<a href="#contact" class="btn btn-outline-primary w-100 btn-fx-8">Contact Sales</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section id="faq" class="py-5 bg-light">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="fw-bold">FAQ</h2>
+				<p class="text-secondary">Answers to common questions</p>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="accordion" id="faqAcc">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="q1h">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#q1" aria-expanded="true" aria-controls="q1">Do buttons have
+									different hover effects?</button>
+							</h2>
+							<div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h"
+								data-bs-parent="#faqAcc">
+								<div class="accordion-body">Yes. Each button uses a unique class like
+									<code>.btn-fx-1</code>, <code>.btn-fx-2</code>, etc., so effects aren’t repeated.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="q2h">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#q2" aria-expanded="false" aria-controls="q2">Are card effects
+									consistent?</button>
+							</h2>
+							<div id="q2" class="accordion-collapse collapse" aria-labelledby="q2h"
+								data-bs-parent="#faqAcc">
+								<div class="accordion-body">All cards share the <code>.hover-lift</code> effect for a
+									unified feel.</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="q3h">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#q3" aria-expanded="false" aria-controls="q3">Is the navbar
+									mobile‑friendly?</button>
+							</h2>
+							<div id="q3" class="accordion-collapse collapse" aria-labelledby="q3h"
+								data-bs-parent="#faqAcc">
+								<div class="accordion-body">The navbar is sticky and uses a “More” dropdown on small
+									screens to avoid clutter.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact -->
+	<section id="contact" class="py-5">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="fw-bold">Contact</h2>
+				<p class="text-secondary">Tell us about your project</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-12 col-lg-6">
+					<form class="card p-4 hover-lift">
+						<div class="row g-3">
+							<div class="col-12 col-md-6">
+								<label class="form-label">Name</label>
+								<input type="text" class="form-control" placeholder="Your name" />
+							</div>
+							<div class="col-12 col-md-6">
+								<label class="form-label">Email</label>
+								<input type="email" class="form-control" placeholder="you@example.com" />
+							</div>
+							<div class="col-12">
+								<label class="form-label">Message</label>
+								<textarea class="form-control" rows="4" placeholder="How can we help?"></textarea>
+							</div>
+							<div class="col-12 d-grid d-sm-flex gap-2">
+								<button type="button" class="btn btn-primary btn-fx-1">Send Message</button>
+								<button type="reset" class="btn btn-outline-secondary btn-fx-4">Reset</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-12 col-lg-6 d-flex align-items-center">
+					<div>
+						<h5 class="fw-semibold mb-3">Why choose us?</h5>
+						<ul class="list-unstyled text-secondary">
+							<li class="mb-2"><i class="fa fa-check text-success me-2"></i>Bootstrap grid with clean
+								utilities</li>
+							<li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sticky navbar with mobile
+								dropdown</li>
+							<li class="mb-2"><i class="fa fa-check text-success me-2"></i>Diverse button hover effects
+							</li>
+							<li><i class="fa fa-check text-success me-2"></i>Unified card hover interactions</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark text-white">
+		<div class="container">
+			<div class="row align-items-center g-3">
+				<div class="col-12 col-md-6">
+					<h3 class="fw-bold mb-2">Make your project easier</h3>
+					<p class="text-white-50 mb-0">Purchase once, use across your sites.</p>
+				</div>
+				<div class="col-12 col-md-6 text-md-end">
+					<a href="#pricing" class="btn btn-danger btn-fx-8">Purchase Theme $29</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
 </body>
+
 </html>

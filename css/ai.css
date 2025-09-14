@@ -1,0 +1,63 @@
+/* Base + smooth scrolling */
+:root {
+  --fx-duration: 260ms;
+  --fx-ease: cubic-bezier(.2,.8,.2,1);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+/* Unified card hover used across sections */
+.hover-lift {
+  transition: transform var(--fx-duration) var(--fx-ease), box-shadow var(--fx-duration) var(--fx-ease), border-color var(--fx-duration) var(--fx-ease);
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+  border-color: rgba(0,0,0,.08) !important;
+}
+
+/* Distinct button hover effects (do not repeat) */
+.btn-fx-1 { position: relative; overflow: hidden; }
+.btn-fx-1::after {
+  content: "";
+  position: absolute; inset: 0 100% 0 0; background: rgba(255,255,255,.25);
+  transition: inset var(--fx-duration) var(--fx-ease);
+}
+.btn-fx-1:hover::after { inset: 0 0 0 0; }
+
+.btn-fx-2 { transition: transform var(--fx-duration) var(--fx-ease), box-shadow var(--fx-duration) var(--fx-ease); }
+.btn-fx-2:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+
+.btn-fx-3 { position: relative; }
+.btn-fx-3::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform var(--fx-duration) var(--fx-ease);
+}
+.btn-fx-3:hover::before { transform: scaleX(1); }
+
+.btn-fx-4 { border-width: 2px !important; transition: color var(--fx-duration) var(--fx-ease), background var(--fx-duration) var(--fx-ease), border-color var(--fx-duration) var(--fx-ease); }
+.btn-fx-4:hover { background: #f8f9fa; color: #000; border-color: #000; }
+
+.btn-fx-5 { position: relative; overflow: hidden; }
+.btn-fx-5::after {
+  content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle at center, rgba(0,0,0,.08), transparent 60%);
+  transform: scale(0); transition: transform var(--fx-duration) var(--fx-ease);
+}
+.btn-fx-5:hover::after { transform: scale(1); }
+
+.btn-fx-6 { transition: letter-spacing var(--fx-duration) var(--fx-ease), box-shadow var(--fx-duration) var(--fx-ease); }
+.btn-fx-6:hover { letter-spacing: .5px; box-shadow: 0 6px 16px rgba(13,110,253,.3); }
+
+.btn-fx-7 { position: relative; }
+.btn-fx-7::before {
+  content: ""; position: absolute; inset: 0; border: 2px solid currentColor; opacity: 0; transform: scale(.95);
+  transition: transform var(--fx-duration) var(--fx-ease), opacity var(--fx-duration) var(--fx-ease);
+}
+.btn-fx-7:hover::before { opacity: 1; transform: scale(1); }
+
+.btn-fx-8 { background-image: linear-gradient(90deg, rgba(255,255,255,.12), rgba(255,255,255,0)); background-size: 200% 100%; background-position: 200% 0; transition: background-position var(--fx-duration) var(--fx-ease), transform var(--fx-duration) var(--fx-ease); }
+.btn-fx-8:hover { background-position: 0 0; transform: translateY(-1px); }
+
+/* Minor helpers */
+.py-lg-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
