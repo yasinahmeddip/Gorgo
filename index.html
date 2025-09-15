@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>AI Project — Responsive Bootstrap</title>
+	<title>Gorgo</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -18,44 +18,20 @@
 
 <body>
 	<!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm">
-		<div class="container">
+	<nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom shadow-sm">
+		<div class="container d-flex align-items-center justify-content-between gap-2 flex-nowrap">
 			<a class="navbar-brand d-flex align-items-center gap-2" href="#home">
 				<img src="img/logo1.png" alt="Logo" height="28">
-				<span class="fw-semibold">AI Project</span>
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-				aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="mainNav">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-lg-center">
+			<div class="menu-wrap flex-grow-1 d-flex justify-content-end">
+				<ul class="navbar-nav ms-auto mb-0 align-items-center flex-nowrap">
 					<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#demos">Demos</a></li>
-					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#services">Services</a></li>
-					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#testimonials">Testimonials</a>
-					</li>
-					<li class="nav-item d-none d-lg-block"><a class="nav-link" href="#pricing">Pricing</a></li>
-					<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-					<!-- Mobile-only: collapse overflow items into dropdown -->
-					<li class="nav-item dropdown d-lg-none">
-						<a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false">
-							More
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="moreDropdown">
-							<li><a class="dropdown-item" href="#demos">Demos</a></li>
-							<li><a class="dropdown-item" href="#services">Services</a></li>
-							<li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
-							<li><a class="dropdown-item" href="#pricing">Pricing</a></li>
-						</ul>
+					<li class="nav-item"><a class="nav-link" href="#demos">Demos</a></li>
+					<li class="nav-item">
+						<a class="btn btn-fx-2 ms-2" style="--bs-btn-bg:#dc3545; --bs-btn-color:#fff; --bs-btn-border-color:#dc3545; --bs-btn-hover-bg:#dc3545; --bs-btn-hover-border-color:#dc3545; --bs-btn-hover-color:#fff;" href="#contact">Contact</a>
 					</li>
 				</ul>
-				<div class="d-flex gap-2">
-					<a href="#pricing" class="btn btn-primary btn-fx-1">Get Started</a>
-					<a href="#contact" class="btn btn-outline-dark btn-fx-2">Contact</a>
-				</div>
 			</div>
 		</div>
 	</nav>

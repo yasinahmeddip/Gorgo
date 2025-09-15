@@ -6,6 +6,16 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
 
+/* Ensure navbar items align perfectly center vertically */
+.navbar .nav-link,
+.navbar .btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Prevent wrapping issues: allow menu to shrink and scroll */
+.navbar .menu-wrap { min-width: 0; }
+
 /* Unified card hover used across sections */
 .hover-lift {
   transition: transform var(--fx-duration) var(--fx-ease), box-shadow var(--fx-duration) var(--fx-ease), border-color var(--fx-duration) var(--fx-ease);
@@ -61,3 +71,64 @@ body { font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial
 
 /* Minor helpers */
 .py-lg-6 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+
+/* Mobile nav tweaks: inline right menu + smaller fonts */
+@media (max-width: 767.98px) {
+  .navbar .navbar-nav { flex-direction: row !important; align-items: center !important; gap: .4rem; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+  .navbar .nav-link { font-size: .85rem; line-height: 1.1; padding: .25rem .5rem; }
+  .navbar .btn { font-size: .8rem; padding: .3rem .6rem; }
+  .navbar .navbar-brand img { height: 22px; }
+  .navbar .container { padding-left: .5rem; padding-right: .5rem; }
+
+  /* AI Services section buttons: smaller on mobile */
+  #services .btn { font-size: .9rem; padding: .4rem .75rem; }
+}
+
+/* Mobile L (≤425px): slightly smaller text and logo */
+@media (max-width: 425px) {
+  .navbar .navbar-nav { gap: .35rem; align-items: center !important; }
+  .navbar .nav-link { font-size: .78rem; line-height: 1.1; padding: .18rem .42rem; }
+  .navbar .btn { font-size: .75rem; padding: .25rem .5rem; }
+  .navbar .navbar-brand img { height: 20px; }
+  .navbar { padding-top: .4rem; padding-bottom: .4rem; }
+  .navbar .container { padding-left: .4rem; padding-right: .4rem; }
+
+  /* AI Services buttons: tighter on mobile L */
+  #services .btn { font-size: .85rem; padding: .35rem .7rem; }
+}
+
+/* Mobile M (≤375px): tighter spacing and sizes */
+@media (max-width: 375px) {
+  .navbar .navbar-nav { gap: .3rem; align-items: center !important; }
+  .navbar .nav-link { font-size: .74rem; line-height: 1.1; padding: .16rem .38rem; }
+  .navbar .btn { font-size: .72rem; padding: .22rem .45rem; }
+  .navbar .navbar-brand img { height: 18px; }
+  .navbar { padding-top: .35rem; padding-bottom: .35rem; }
+  .navbar .container { padding-left: .35rem; padding-right: .35rem; }
+
+  /* Global buttons: shrink size and spacing on mobile M */
+  .btn { font-size: .74rem; padding: .26rem .5rem; }
+  .btn + .btn { margin-left: .25rem; }
+
+  /* AI Services buttons: smaller on mobile M */
+  #services .btn { font-size: .72rem; padding: .24rem .5rem; }
+}
+
+/* Mobile S (≤320px): smallest sizes, keep on one line */
+@media (max-width: 320px) {
+  .navbar { padding-top: .25rem; padding-bottom: .25rem; }
+  .navbar .container { padding-left: .25rem; padding-right: .25rem; }
+  .navbar .navbar-brand { margin-right: .25rem; }
+  .navbar .navbar-brand img { height: 15px; }
+  .navbar .navbar-nav { gap: .2rem; align-items: center !important; }
+  .navbar .nav-link { font-size: .68rem; line-height: 1.1; padding: .1rem .28rem; }
+  .navbar .btn { font-size: .66rem; padding: .14rem .3rem; }
+  .navbar .navbar-nav .btn { margin-top: 0 !important; }
+
+  /* Global buttons: smallest size and spacing on mobile S */
+  .btn { font-size: .7rem; padding: .22rem .46rem; }
+  .btn + .btn { margin-left: .2rem; }
+
+  /* AI Services buttons: smallest on mobile S */
+  #services .btn { font-size: .68rem; padding: .2rem .44rem; }
+}
